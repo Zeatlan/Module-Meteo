@@ -16,10 +16,10 @@ export default {
   }),
 
   mutations: {
-    GET_WEATHER(state, city) {
+    async GET_WEATHER(state, city) {
 
       axios
-      .get('http://api.openweathermap.org/data/2.5/weather?q='+ city +'&units=metric&lang=fr&appid=31f429cfb0ddd0f0183cefa48e683751')
+      .get('https://api.openweathermap.org/data/2.5/weather?q='+ city +'&units=metric&lang=fr&appid=31f429cfb0ddd0f0183cefa48e683751')
       .then(response => {
         state.icon = response.data.weather[0].icon;
 

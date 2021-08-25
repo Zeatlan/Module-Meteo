@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-/* Init variable */
+/* Variables */
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,17 +39,20 @@ body img.logo {
 }
 
 a {
+  color: #ac3476;
+  font-weight: 900;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+a.copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #ac3476;
-  font-weight: 900;
-  text-decoration: none;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 
 a:hover {

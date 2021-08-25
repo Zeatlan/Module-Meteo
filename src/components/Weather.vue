@@ -33,11 +33,11 @@
 
         <!-- Specifics info -->
         <div id="info">
-          <span><img class="icon" src="/src/assets/img/sunrise.svg"> {{ weather.sunrise }}</span>
-          <span><img class="icon" src="/src/assets/img/sunset.svg"> {{ weather.sunset }}</span>
-          <span><img class="icon" src="/src/assets/img/humidity.svg"> {{ weather.humidity }}</span>
-          <span><img class="icon" src="/src/assets/img/pressure.svg"> {{ weather.pressure }}</span>
-          <span><img class="icon" src="/src/assets/img/wind.svg"> {{ weather.wind }}</span>
+          <span><img class="icon" src="@/assets/img/sunrise.svg"> {{ weather.sunrise }}</span>
+          <span><img class="icon" src="@/assets/img/sunset.svg"> {{ weather.sunset }}</span>
+          <span><img class="icon" src="@/assets/img/humidity.svg"> {{ weather.humidity }}</span>
+          <span><img class="icon" src="@/assets/img/pressure.svg"> {{ weather.pressure }}</span>
+          <span><img class="icon" src="@/assets/img/wind.svg"> {{ weather.wind }}</span>
         </div>
         <!-- End Specifics info -->
 
@@ -46,34 +46,23 @@
   </transition>
 </template>
 
-<script>
-import { useStore } from 'vuex';
+<script setup>
 import { onBeforeMount, ref } from 'vue';
+import { useStore } from 'vuex';
 
-export default {
-  name: 'Weather',
-  setup() {
-    const store = useStore();
+const store = useStore();
 
-    // Variables
-    const city = ref(store.state.modWeather.city);
-    const weather = ref(store.state.modWeather);
+// Variables
+const city = ref(store.state.modWeather.city);
+const weather = ref(store.state.modWeather);
 
-    onBeforeMount(() => {
-      store.dispatch('getWeather', city.value);
-    });
+onBeforeMount(() => {
+  store.dispatch('getWeather', city.value);
+});
 
-    // Mettre à jour les informations d'une ville lors d'un input
-    function changeCity() {
-      store.dispatch('getWeather', city.value.toLowerCase().replace(/[&/\\#,+()$~%.'":*?<>{}]/g,'_'));
-      city.value = "";
-    }
-
-    return {
-      city,
-      weather,
-      changeCity
-    }
-  }
+// Mettre à jour les informations d'une ville lors d'un input
+function changeCity() {
+  store.dispatch('getWeather', city.value.toLowerCase().replace(/[&/\\#,+()$~%.'":*?<>{}]/g,'_'));
+  city.value = "";
 }
 </script>
