@@ -1,12 +1,8 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+import moduleWeather from './module';
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    modWeather: moduleWeather
   }
 })

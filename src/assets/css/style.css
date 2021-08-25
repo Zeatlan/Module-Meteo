@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* Init variable */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50vh;
+  color: #fff;
+  text-shadow: 0px 0px 2px #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  background: #3d4869;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#3d4869), to(#263048)) fixed;
+  background: linear-gradient(#3d4869, #263048) fixed;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-repeat: no-repeat;
+}
+
+body,
+body html {
+  margin: 0;
+  padding: 0;
+}
+
+body img.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px auto;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ac3476;
+  font-weight: 900;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+a:hover {
+  color: #ce4a92;
+}
+
+span {
+  display: block;
+}
+
+/* FORM CITY */
+#form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 512px;
+  margin: 2em auto;
+}
+
+#form input {
+  width: 250px;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+
+#form button {
+  width: 85px;
+  color: #fff;
+  border: 2px solid #ac3476;
+  border-radius: 5px;
+  background-color: #ce4a92;
+  cursor: pointer;
+}
+
+#form button:hover {
+  background-color: #ac3476;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/* DISPLAY METEO */
+#card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 512px;
+  background-color: #ce4a92;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 5px #263048;
+          box-shadow: 7px 7px 5px #263048;
+  padding: 1em;
+  margin: 0 auto;
+  /* WEATHER GLOBAL INFO */
+  /* WEATHER SPECIFIC INFO */
+}
+
+#card .icon {
+  -webkit-filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+          filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+}
+
+#card #weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0.5em;
+}
+
+#card #weather img {
+  margin-right: 10pt;
+}
+
+#card #weather #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#card #weather #about h1 {
+  font-weight: 900;
+  text-shadow: -5px 5px 0px #ac3476;
+  margin: 0;
+}
+
+#card #weather #about span.temperature {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+#card #weather #about span.overcast {
+  margin: 5pt 0;
+}
+
+#card #weather #minmax {
+  justify-self: flex-end;
+}
+
+#card #weather #minmax div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80px;
+}
+
+#card #info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+
+#card #info img {
+  width: 16pt;
+  vertical-align: middle;
+}
+
+/* MOBILE DEVICES */
+@media screen and (max-width: 600px) {
+  #form {
+    width: 300px;
+  }
+  #card {
+    width: 300px;
+  }
+  #card #weather {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #card #weather #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #card #weather #about img {
+    width: 96pt;
+    margin: 0 auto;
+  }
+  #card #weather #about div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #card #weather #about div h1 {
+    width: 100%;
+  }
+  #card #weather #about div span {
+    margin: 0 auto;
+  }
+  #card #weather #minmax {
+    margin: 0 auto;
+    margin-top: 10pt;
+  }
+  #card #weather #minmax div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 150px;
+  }
+  #card #info {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #card #info span {
+    margin: 5pt 5pt;
+  }
+  p {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

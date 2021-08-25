@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Weather />
+  <img class="logo" src="/src/assets/img/dnd-logo.png" alt="Logo dn'd" width="128">
+
+  <p>Consultez le <strong>EXPLANATION.md</strong> pour voir l'explication de l'algorithme d'autocorrection.</p>
+
+  <p><a href="https://faelivrin.fr/portfolio" target="_blank">Réalisé par Alex Salim</a></p>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Weather from './components/Weather.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Weather,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

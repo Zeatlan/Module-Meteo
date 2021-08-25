@@ -1,14 +1,19 @@
 {
   "name": "dnd-meteo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "vite",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^1.4.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "vite": "^2.5.0",
     "vue": "^3.0.0",
     "vuex": "^4.0.0-0"
   },

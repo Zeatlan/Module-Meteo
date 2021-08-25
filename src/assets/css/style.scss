@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Variables */
+$bg-color: #3d4869;
+$bg-color-end: #263048;
+$pink: rgb(206, 74, 146);
+$pink-darker: rgb(172, 52, 118);
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50vh;
+
+  color: #fff;
+  text-shadow: 0px 0px 2px #000000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+
+  background: $bg-color; /* Old browsers */
+  background: -moz-linear-gradient($bg-color, $bg-color-end) fixed; /* FF3.6-15 */
+  background: -webkit-linear-gradient($bg-color, $bg-color-end) fixed; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($bg-color, $bg-color-end) fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-repeat: no-repeat;
+
+  &,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  img.logo {
+    display: flex;
+    margin: 25px auto;
+  }
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  color: $pink-darker;
+  font-weight: 900;
+  text-decoration: none;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+span {
+  display: block;
+}
+
+/* FORM CITY */
+#form {
+  display: flex;
+  justify-content: space-between;
+
+  width: 512px;
+  margin: 2em auto;
+
+  input {
+    width: 250px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 85px;
+
+    color: #fff;
+
+    border: 2px solid $pink-darker;
+    border-radius: 5px;
+    background-color: $pink;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $pink-darker;
+      transition-duration: 0.3s;
+    }
+  }
+}
+
+/* DISPLAY METEO */
+#card {
+  display: flex;
+  flex-direction: column;
+
+  width: 512px;
+
+  background-color: $pink;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  border-radius: 10px;
+  box-shadow: 7px 7px 5px $bg-color-end;
+
+  padding: 1em;
+  margin: 0 auto;
+
+  .icon {
+    filter: invert(100%) sepia(91%) saturate(38%) hue-rotate(321deg)
+      brightness(110%) contrast(110%);
+  }
+
+  /* WEATHER GLOBAL INFO */
+  #weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 0.5em;
+
+    img {
+      margin-right: 10pt;
+    }
+
+    #about {
+      display: flex;
+
+      h1 {
+        font-weight: 900;
+        text-shadow: -5px 5px 0px $pink-darker;
+        margin: 0;
+      }
+
+      span {
+        &.temperature {
+          font-weight: 700;
+          font-size: 1.3em;
+        }
+        &.overcast {
+          margin: 5pt 0;
+        }
+      }
+    }
+
+    #minmax {
+      justify-self: flex-end;
+
+      & div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80px;
+      }
+    }
+  }
+
+  /* WEATHER SPECIFIC INFO */
+  #info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2em;
+
+    img {
+      width: 16pt;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* MOBILE DEVICES */
+@media screen and (max-width: 600px) {
+  #form {
+    width: 300px;
+  }
+
+  #card {
+    width: 300px;
+    #weather {
+      flex-direction: column;
+      #about {
+        flex-direction: column;
+
+        img {
+          width: 96pt;
+          margin: 0 auto;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          text-align: center;
+          h1 {
+            width: 100%;
+          }
+
+          span {
+            margin: 0 auto;
+          }
+        }
+      }
+      #minmax {
+        margin: 0 auto;
+        margin-top: 10pt;
+        & div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 150px;
+        }
+      }
+    }
+
+    #info {
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      span {
+        margin: 5pt 5pt;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}

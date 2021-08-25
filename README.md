@@ -1,24 +1,29 @@
 # dnd-meteo
 
-## Project setup
+Module VueJS permettant l'affichage des informations basiques sur la météo d'une ville spécifiée réalisé par [Alex Salim](https://faelivrin.fr/portfolio/).
+
+## Setup
+
 ```
-npm install
+yarn add
 ```
 
-### Compiles and hot-reloads for development
+### Lancer l'environnement dev
+
 ```
-npm run serve
+yarn run dev
 ```
 
-### Compiles and minifies for production
+### Déployer l'application
+
 ```
-npm run build
+yarn run deploy
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Technologies & utilités
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Yarn
+- VueX
+- Axios
+- Vite
+- API openWeatherMap
